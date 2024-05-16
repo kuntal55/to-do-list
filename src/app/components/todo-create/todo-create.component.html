@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Hi There, Please add todo here</h1>
+<div mat-dialog-content>
+    <form [formGroup]=todoForm>
+        <mat-form-field appearance="outline" style="padding-top: 1rem;">
+            <mat-label>Todo Name</mat-label>
+            <input matInput placeholder="Todo Name" formControlName="todoName">
+            <mat-icon matSuffix>grading</mat-icon>
+            <mat-hint>You can add any todo here</mat-hint>
+          </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="onSubmit()" cdkFocusInitial>Save</button>
+</div>
